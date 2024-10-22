@@ -543,6 +543,10 @@
                 border: solid 1px #000000;
             }
 
+            .ring-size-country-text{
+                cursor: pointer;
+            }
+
             #scale_calibration_page .unit-tabs .tab:first-child {
                 border-top-left-radius: 3px;
                 border-bottom-left-radius: 3px;
@@ -1077,8 +1081,10 @@
 
             .ring-sizer-counter{
                 font-size: 12px;
-                top: 98px;
-                position: sticky;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
                 padding: 5px 7px;
                 background: #EFE9E0;
                 border-radius: 50px;
@@ -1180,1330 +1186,237 @@
         </style>
         <script>
             var ringSizeMapping = [{
-                "diameterMM": 14.1,
-                "circumferenceMM": 44.3,
-                "ringSize": "3",
-                "country": "US"
-            }, {
-                "diameterMM": 14.3,
-                "circumferenceMM": null,
-                "ringSize": "3.25",
-                "country": "US"
-            }, {
-                "diameterMM": 14.5,
-                "circumferenceMM": null,
-                "ringSize": "3.50",
-                "country": "US"
-            }, {
-                "diameterMM": 14.7,
-                "circumferenceMM": null,
-                "ringSize": "3.75",
-                "country": "US"
-            }, {
                 "diameterMM": 14.9,
                 "circumferenceMM": null,
                 "ringSize": "4",
-                "country": "US"
-            }, {
-                "diameterMM": 15.1,
-                "circumferenceMM": null,
-                "ringSize": "4.25",
-                "country": "US"
-            }, {
+                "country": "US",
+                "MM": "46.8"
+            },{
                 "diameterMM": 15.3,
                 "circumferenceMM": null,
                 "ringSize": "4.50",
-                "country": "US"
-            }, {
-                "diameterMM": 15.5,
-                "circumferenceMM": null,
-                "ringSize": "4.75",
-                "country": "US"
-            }, {
+                "country": "US",
+                "MM": "48.0"
+            },{
                 "diameterMM": 15.7,
                 "circumferenceMM": null,
                 "ringSize": "5",
-                "country": "US"
-            }, {
-                "diameterMM": 15.9,
-                "circumferenceMM": null,
-                "ringSize": "5.25",
-                "country": "US"
-            }, {
+                "country": "US",
+                "MM": "49.3"
+            },{
                 "diameterMM": 16.1,
                 "circumferenceMM": null,
                 "ringSize": "5.50",
-                "country": "US"
-            }, {
-                "diameterMM": 16.3,
-                "circumferenceMM": null,
-                "ringSize": "5.75",
-                "country": "US"
+                "country": "US",
+                "MM": "50.6"
             }, {
                 "diameterMM": 16.5,
                 "circumferenceMM": null,
                 "ringSize": "6",
-                "country": "US"
-            }, {
-                "diameterMM": 16.7,
-                "circumferenceMM": null,
-                "ringSize": "6.25",
-                "country": "US"
-            }, {
+                "country": "US",
+                "MM": "51.8"
+            },{
                 "diameterMM": 16.9,
                 "circumferenceMM": null,
                 "ringSize": "6.50",
-                "country": "US"
-            }, {
-                "diameterMM": 17.1,
-                "circumferenceMM": null,
-                "ringSize": "6.75",
-                "country": "US"
+                "country": "US",
+                "MM": "53.1"
             }, {
                 "diameterMM": 17.3,
                 "circumferenceMM": null,
                 "ringSize": "7",
-                "country": "US"
-            }, {
-                "diameterMM": 17.5,
-                "circumferenceMM": null,
-                "ringSize": "7.25",
-                "country": "US"
-            }, {
+                "country": "US",
+                "MM": "54.4"
+            },{
                 "diameterMM": 17.7,
                 "circumferenceMM": null,
                 "ringSize": "7.50",
-                "country": "US"
-            }, {
-                "diameterMM": 17.9,
-                "circumferenceMM": null,
-                "ringSize": "7.75",
-                "country": "US"
+                "country": "US",
+                "MM": "55.7"
             }, {
                 "diameterMM": 18.1,
                 "circumferenceMM": null,
                 "ringSize": "8",
-                "country": "US"
-            }, {
-                "diameterMM": 18.3,
-                "circumferenceMM": null,
-                "ringSize": "8.25",
-                "country": "US"
+                "country": "US",
+                "MM": "56.9"
             }, {
                 "diameterMM": 18.5,
                 "circumferenceMM": null,
                 "ringSize": "8.50",
-                "country": "US"
-            }, {
-                "diameterMM": 18.8,
-                "circumferenceMM": null,
-                "ringSize": "8.75",
-                "country": "US"
+                "country": "US",
+                "MM": "58.2"
             }, {
                 "diameterMM": 19,
                 "circumferenceMM": null,
                 "ringSize": "9",
-                "country": "US"
-            }, {
-                "diameterMM": 19.2,
-                "circumferenceMM": null,
-                "ringSize": "9.25",
-                "country": "US"
+                "country": "US",
+                "MM": "59.5"
             }, {
                 "diameterMM": 19.4,
                 "circumferenceMM": null,
                 "ringSize": "9.50",
-                "country": "US"
-            }, {
-                "diameterMM": 19.6,
-                "circumferenceMM": null,
-                "ringSize": "9.75",
-                "country": "US"
+                "country": "US",
+                "MM": "60.8"
             }, {
                 "diameterMM": 19.8,
                 "circumferenceMM": null,
                 "ringSize": "10",
-                "country": "US"
-            }, {
-                "diameterMM": 20,
-                "circumferenceMM": null,
-                "ringSize": "10.25",
-                "country": "US"
+                "country": "US",
+                "MM": "62.1"
             }, {
                 "diameterMM": 20.2,
                 "circumferenceMM": null,
                 "ringSize": "10.50",
-                "country": "US"
-            }, {
-                "diameterMM": 20.4,
-                "circumferenceMM": null,
-                "ringSize": "10.75",
-                "country": "US"
+                "country": "US",
+                "MM": "63.3"
             }, {
                 "diameterMM": 20.6,
                 "circumferenceMM": null,
                 "ringSize": "11",
-                "country": "US"
-            }, {
-                "diameterMM": 20.8,
-                "circumferenceMM": null,
-                "ringSize": "11.25",
-                "country": "US"
+                "country": "US",
+                "MM": "64.6"
             }, {
                 "diameterMM": 21,
                 "circumferenceMM": null,
                 "ringSize": "11.50",
-                "country": "US"
-            }, {
-                "diameterMM": 21.2,
-                "circumferenceMM": null,
-                "ringSize": "11.75",
-                "country": "US"
+                "country": "US",
+                "MM": "65.9"
             }, {
                 "diameterMM": 21.4,
                 "circumferenceMM": null,
                 "ringSize": "12",
-                "country": "US"
-            }, {
-                "diameterMM": 21.6,
-                "circumferenceMM": null,
-                "ringSize": "12.25",
-                "country": "US"
+                "country": "US",
+                "MM": "67.2"
             }, {
                 "diameterMM": 21.8,
                 "circumferenceMM": null,
                 "ringSize": "12.50",
-                "country": "US"
-            }, {
-                "diameterMM": 22,
-                "circumferenceMM": null,
-                "ringSize": "12.75",
-                "country": "US"
+                "country": "US",
+                "MM": "68.4"
             }, {
                 "diameterMM": 22.2,
                 "circumferenceMM": null,
                 "ringSize": "13",
-                "country": "US"
-            }, {
-                "diameterMM": 14.1,
-                "circumferenceMM": 44.3,
-                "ringSize": "3",
-                "country": "CA"
-            }, {
-                "diameterMM": 14.3,
-                "circumferenceMM": null,
-                "ringSize": "3\u00bc",
-                "country": "CA"
-            }, {
-                "diameterMM": 14.5,
-                "circumferenceMM": null,
-                "ringSize": "3\u00bd",
-                "country": "CA"
-            }, {
-                "diameterMM": 14.7,
-                "circumferenceMM": null,
-                "ringSize": "3\u00be",
-                "country": "CA"
-            }, {
-                "diameterMM": 14.9,
-                "circumferenceMM": null,
-                "ringSize": "4",
-                "country": "CA"
-            }, {
-                "diameterMM": 15.1,
-                "circumferenceMM": null,
-                "ringSize": "4\u00bc",
-                "country": "CA"
-            }, {
-                "diameterMM": 15.3,
-                "circumferenceMM": null,
-                "ringSize": "4\u00bd",
-                "country": "CA"
-            }, {
-                "diameterMM": 15.5,
-                "circumferenceMM": null,
-                "ringSize": "4\u00be",
-                "country": "CA"
-            }, {
-                "diameterMM": 15.7,
-                "circumferenceMM": null,
-                "ringSize": "5",
-                "country": "CA"
-            }, {
-                "diameterMM": 15.9,
-                "circumferenceMM": null,
-                "ringSize": "5\u00bc",
-                "country": "CA"
-            }, {
-                "diameterMM": 16.1,
-                "circumferenceMM": null,
-                "ringSize": "5\u00bd",
-                "country": "CA"
-            }, {
-                "diameterMM": 16.3,
-                "circumferenceMM": null,
-                "ringSize": "5\u00be",
-                "country": "CA"
-            }, {
-                "diameterMM": 16.5,
-                "circumferenceMM": null,
-                "ringSize": "6",
-                "country": "CA"
-            }, {
-                "diameterMM": 16.7,
-                "circumferenceMM": null,
-                "ringSize": "6\u00bc",
-                "country": "CA"
-            }, {
-                "diameterMM": 16.9,
-                "circumferenceMM": null,
-                "ringSize": "6\u00bd",
-                "country": "CA"
-            }, {
-                "diameterMM": 17.1,
-                "circumferenceMM": null,
-                "ringSize": "6\u00be",
-                "country": "CA"
-            }, {
-                "diameterMM": 17.3,
-                "circumferenceMM": null,
-                "ringSize": "7",
-                "country": "CA"
-            }, {
-                "diameterMM": 17.5,
-                "circumferenceMM": null,
-                "ringSize": "7\u00bc",
-                "country": "CA"
-            }, {
-                "diameterMM": 17.7,
-                "circumferenceMM": null,
-                "ringSize": "7\u00bd",
-                "country": "CA"
-            }, {
-                "diameterMM": 17.9,
-                "circumferenceMM": null,
-                "ringSize": "7\u00be",
-                "country": "CA"
-            }, {
-                "diameterMM": 18.1,
-                "circumferenceMM": null,
-                "ringSize": "8",
-                "country": "CA"
-            }, {
-                "diameterMM": 18.3,
-                "circumferenceMM": null,
-                "ringSize": "8\u00bc",
-                "country": "CA"
-            }, {
-                "diameterMM": 18.5,
-                "circumferenceMM": null,
-                "ringSize": "8\u00bd",
-                "country": "CA"
-            }, {
-                "diameterMM": 18.8,
-                "circumferenceMM": null,
-                "ringSize": "8\u00be",
-                "country": "CA"
-            }, {
-                "diameterMM": 19,
-                "circumferenceMM": null,
-                "ringSize": "9",
-                "country": "CA"
-            }, {
-                "diameterMM": 19.2,
-                "circumferenceMM": null,
-                "ringSize": "9\u00bc",
-                "country": "CA"
-            }, {
-                "diameterMM": 19.4,
-                "circumferenceMM": null,
-                "ringSize": "9\u00bd",
-                "country": "CA"
-            }, {
-                "diameterMM": 19.6,
-                "circumferenceMM": null,
-                "ringSize": "9\u00be",
-                "country": "CA"
-            }, {
-                "diameterMM": 19.8,
-                "circumferenceMM": null,
-                "ringSize": "10",
-                "country": "CA"
-            }, {
-                "diameterMM": 20,
-                "circumferenceMM": null,
-                "ringSize": "10\u00bc",
-                "country": "CA"
-            }, {
-                "diameterMM": 20.2,
-                "circumferenceMM": null,
-                "ringSize": "10\u00bd",
-                "country": "CA"
-            }, {
-                "diameterMM": 20.4,
-                "circumferenceMM": null,
-                "ringSize": "10\u00be",
-                "country": "CA"
-            }, {
-                "diameterMM": 20.6,
-                "circumferenceMM": null,
-                "ringSize": "11",
-                "country": "CA"
-            }, {
-                "diameterMM": 20.8,
-                "circumferenceMM": null,
-                "ringSize": "11\u00bc",
-                "country": "CA"
-            }, {
-                "diameterMM": 21,
-                "circumferenceMM": null,
-                "ringSize": "11\u00bd",
-                "country": "CA"
-            }, {
-                "diameterMM": 21.2,
-                "circumferenceMM": null,
-                "ringSize": "11\u00be",
-                "country": "CA"
-            }, {
-                "diameterMM": 21.4,
-                "circumferenceMM": null,
-                "ringSize": "12",
-                "country": "CA"
-            }, {
-                "diameterMM": 21.6,
-                "circumferenceMM": null,
-                "ringSize": "12\u00bc",
-                "country": "CA"
-            }, {
-                "diameterMM": 21.8,
-                "circumferenceMM": null,
-                "ringSize": "12\u00bd",
-                "country": "CA"
-            }, {
-                "diameterMM": 22,
-                "circumferenceMM": null,
-                "ringSize": "12\u00be",
-                "country": "CA"
-            }, {
-                "diameterMM": 22.2,
-                "circumferenceMM": null,
-                "ringSize": "13",
-                "country": "CA"
-            }, {
-                "diameterMM": 14.1,
-                "circumferenceMM": null,
-                "ringSize": "F",
-                "country": "GB"
-            }, {
-                "diameterMM": 14.3,
-                "circumferenceMM": null,
-                "ringSize": "F.5",
-                "country": "GB"
-            }, {
-                "diameterMM": 14.5,
-                "circumferenceMM": null,
-                "ringSize": "G",
-                "country": "GB"
-            }, {
-                "diameterMM": 14.7,
-                "circumferenceMM": null,
-                "ringSize": "G.5",
-                "country": "GB"
-            }, {
+                "country": "US",
+                "MM": "69.7"
+            }, 
+            
+            
+
+            {
                 "diameterMM": 14.9,
                 "circumferenceMM": null,
                 "ringSize": "H",
-                "country": "GB"
+                "country": "GB",
+                "MM": "46.8"
             }, {
                 "diameterMM": 15.1,
                 "circumferenceMM": null,
-                "ringSize": "H.5",
-                "country": "GB"
+                "ringSize": "I.5",
+                "country": "GB",
+                "MM": "48.0"
             }, {
                 "diameterMM": 15.3,
                 "circumferenceMM": null,
-                "ringSize": "I",
-                "country": "GB"
+                "ringSize": "J.5",
+                "country": "GB",
+                "MM": "49.3"
             }, {
                 "diameterMM": 15.5,
                 "circumferenceMM": null,
-                "ringSize": "I.5",
-                "country": "GB"
+                "ringSize": "K.5",
+                "country": "GB",
+                "MM": "50.6"
             }, {
                 "diameterMM": 15.7,
                 "circumferenceMM": null,
-                "ringSize": "J",
-                "country": "GB"
+                "ringSize": "L.5",
+                "country": "GB",
+                "MM": "51.8"
             }, {
                 "diameterMM": 15.9,
                 "circumferenceMM": null,
-                "ringSize": "J.5",
-                "country": "GB"
+                "ringSize": "M.5",
+                "country": "GB",
+                "MM": "53.1"
             }, {
                 "diameterMM": 16.1,
                 "circumferenceMM": null,
-                "ringSize": "K",
-                "country": "GB"
+                "ringSize": "N.5",
+                "country": "GB",
+                "MM": "54.4"
             }, {
                 "diameterMM": 16.3,
                 "circumferenceMM": null,
-                "ringSize": "K.5",
-                "country": "GB"
+                "ringSize": "O.5",
+                "country": "GB",
+                "MM": "55.7"
             }, {
                 "diameterMM": 16.5,
                 "circumferenceMM": null,
-                "ringSize": "L",
-                "country": "GB"
+                "ringSize": "P.5",
+                "country": "GB",
+                "MM": "56.9"
             }, {
                 "diameterMM": 16.7,
                 "circumferenceMM": null,
-                "ringSize": "L.5",
-                "country": "GB"
+                "ringSize": "Q.5",
+                "country": "GB",
+                "MM": "58.2"
             }, {
                 "diameterMM": 16.9,
                 "circumferenceMM": null,
-                "ringSize": "M",
-                "country": "GB"
+                "ringSize": "R.5",
+                "country": "GB",
+                "MM": "59.5"
             }, {
                 "diameterMM": 17.1,
                 "circumferenceMM": null,
-                "ringSize": "M.5",
-                "country": "GB"
+                "ringSize": "S.5",
+                "country": "GB",
+                "MM": "60.8"
             }, {
                 "diameterMM": 17.3,
                 "circumferenceMM": null,
-                "ringSize": "N",
-                "country": "GB"
+                "ringSize": "T.5",
+                "country": "GB",
+                "MM": "62.1"
             }, {
                 "diameterMM": 17.5,
                 "circumferenceMM": null,
-                "ringSize": "N.5",
-                "country": "GB"
+                "ringSize": "U.5",
+                "country": "GB",
+                "MM": "63.3"
             }, {
                 "diameterMM": 17.7,
                 "circumferenceMM": null,
-                "ringSize": "O",
-                "country": "GB"
+                "ringSize": "V.5",
+                "country": "GB",
+                "MM": "64.6"
             }, {
                 "diameterMM": 17.9,
                 "circumferenceMM": null,
-                "ringSize": "O.5",
-                "country": "GB"
+                "ringSize": "W.5",
+                "country": "GB",
+                "MM": "65.9"
             }, {
                 "diameterMM": 18.1,
                 "circumferenceMM": null,
-                "ringSize": "P",
-                "country": "GB"
+                "ringSize": "X.5",
+                "country": "GB",
+                "MM": "67.2"
             }, {
                 "diameterMM": 18.3,
                 "circumferenceMM": null,
-                "ringSize": "P.5",
-                "country": "GB"
-            }, {
-                "diameterMM": 18.5,
-                "circumferenceMM": null,
-                "ringSize": "Q",
-                "country": "GB"
-            }, {
-                "diameterMM": 18.8,
-                "circumferenceMM": null,
-                "ringSize": "Q.5",
-                "country": "GB"
-            }, {
-                "diameterMM": 19,
-                "circumferenceMM": null,
-                "ringSize": "R",
-                "country": "GB"
-            }, {
-                "diameterMM": 19.2,
-                "circumferenceMM": null,
-                "ringSize": "R.5",
-                "country": "GB"
-            }, {
-                "diameterMM": 19.4,
-                "circumferenceMM": null,
-                "ringSize": "S",
-                "country": "GB"
-            }, {
-                "diameterMM": 19.6,
-                "circumferenceMM": null,
-                "ringSize": "S.5",
-                "country": "GB"
-            }, {
-                "diameterMM": 19.8,
-                "circumferenceMM": null,
-                "ringSize": "T",
-                "country": "GB"
-            }, {
-                "diameterMM": 20,
-                "circumferenceMM": null,
-                "ringSize": "T.5",
-                "country": "GB"
-            }, {
-                "diameterMM": 20.2,
-                "circumferenceMM": null,
-                "ringSize": "U",
-                "country": "GB"
-            }, {
-                "diameterMM": 20.4,
-                "circumferenceMM": null,
-                "ringSize": "U.5",
-                "country": "GB"
-            }, {
-                "diameterMM": 20.6,
-                "circumferenceMM": null,
-                "ringSize": "V",
-                "country": "GB"
-            }, {
-                "diameterMM": 20.8,
-                "circumferenceMM": null,
-                "ringSize": "V.5",
-                "country": "GB"
-            }, {
-                "diameterMM": 21,
-                "circumferenceMM": null,
-                "ringSize": "W",
-                "country": "GB"
-            }, {
-                "diameterMM": 21.2,
-                "circumferenceMM": null,
-                "ringSize": "W.5",
-                "country": "GB"
-            }, {
-                "diameterMM": 21.4,
-                "circumferenceMM": null,
-                "ringSize": "X",
-                "country": "GB"
-            }, {
-                "diameterMM": 21.6,
-                "circumferenceMM": null,
-                "ringSize": "X.5",
-                "country": "GB"
-            }, {
-                "diameterMM": 21.8,
-                "circumferenceMM": null,
-                "ringSize": "Y",
-                "country": "GB"
-            }, {
-                "diameterMM": 22,
-                "circumferenceMM": null,
                 "ringSize": "Z",
-                "country": "GB"
-            }, {
-                "diameterMM": 22.2,
-                "circumferenceMM": null,
-                "ringSize": "Z.5",
-                "country": "GB"
-            }, {
-                "diameterMM": 14.1,
-                "circumferenceMM": null,
-                "ringSize": "F",
-                "country": "AU"
-            }, {
-                "diameterMM": 14.3,
-                "circumferenceMM": null,
-                "ringSize": "F.5",
-                "country": "AU"
-            }, {
-                "diameterMM": 14.5,
-                "circumferenceMM": null,
-                "ringSize": "G",
-                "country": "AU"
-            }, {
-                "diameterMM": 14.7,
-                "circumferenceMM": null,
-                "ringSize": "G.5",
-                "country": "AU"
-            }, {
-                "diameterMM": 14.9,
-                "circumferenceMM": null,
-                "ringSize": "H",
-                "country": "AU"
-            }, {
-                "diameterMM": 15.1,
-                "circumferenceMM": null,
-                "ringSize": "H.5",
-                "country": "AU"
-            }, {
-                "diameterMM": 15.3,
-                "circumferenceMM": null,
-                "ringSize": "I",
-                "country": "AU"
-            }, {
-                "diameterMM": 15.5,
-                "circumferenceMM": null,
-                "ringSize": "I.5",
-                "country": "AU"
-            }, {
-                "diameterMM": 15.7,
-                "circumferenceMM": null,
-                "ringSize": "J",
-                "country": "AU"
-            }, {
-                "diameterMM": 15.9,
-                "circumferenceMM": null,
-                "ringSize": "J.5",
-                "country": "AU"
-            }, {
-                "diameterMM": 16.1,
-                "circumferenceMM": null,
-                "ringSize": "K",
-                "country": "AU"
-            }, {
-                "diameterMM": 16.3,
-                "circumferenceMM": null,
-                "ringSize": "K.5",
-                "country": "AU"
-            }, {
-                "diameterMM": 16.5,
-                "circumferenceMM": null,
-                "ringSize": "L",
-                "country": "AU"
-            }, {
-                "diameterMM": 16.7,
-                "circumferenceMM": null,
-                "ringSize": "L.5",
-                "country": "AU"
-            }, {
-                "diameterMM": 16.9,
-                "circumferenceMM": null,
-                "ringSize": "M",
-                "country": "AU"
-            }, {
-                "diameterMM": 17.1,
-                "circumferenceMM": null,
-                "ringSize": "M.5",
-                "country": "AU"
-            }, {
-                "diameterMM": 17.3,
-                "circumferenceMM": null,
-                "ringSize": "N",
-                "country": "AU"
-            }, {
-                "diameterMM": 17.5,
-                "circumferenceMM": null,
-                "ringSize": "N.5",
-                "country": "AU"
-            }, {
-                "diameterMM": 17.7,
-                "circumferenceMM": null,
-                "ringSize": "O",
-                "country": "AU"
-            }, {
-                "diameterMM": 17.9,
-                "circumferenceMM": null,
-                "ringSize": "O.5",
-                "country": "AU"
-            }, {
-                "diameterMM": 18.1,
-                "circumferenceMM": null,
-                "ringSize": "P",
-                "country": "AU"
-            }, {
-                "diameterMM": 18.3,
-                "circumferenceMM": null,
-                "ringSize": "P.5",
-                "country": "AU"
+                "country": "GB",
+                "MM": "68.4"
             }, {
                 "diameterMM": 18.5,
                 "circumferenceMM": null,
-                "ringSize": "Q",
-                "country": "AU"
-            }, {
-                "diameterMM": 18.8,
-                "circumferenceMM": null,
-                "ringSize": "Q.5",
-                "country": "AU"
-            }, {
-                "diameterMM": 19,
-                "circumferenceMM": null,
-                "ringSize": "R",
-                "country": "AU"
-            }, {
-                "diameterMM": 19.2,
-                "circumferenceMM": null,
-                "ringSize": "R.5",
-                "country": "AU"
-            }, {
-                "diameterMM": 19.4,
-                "circumferenceMM": null,
-                "ringSize": "S",
-                "country": "AU"
-            }, {
-                "diameterMM": 19.6,
-                "circumferenceMM": null,
-                "ringSize": "S.5",
-                "country": "AU"
-            }, {
-                "diameterMM": 19.8,
-                "circumferenceMM": null,
-                "ringSize": "T",
-                "country": "AU"
-            }, {
-                "diameterMM": 20,
-                "circumferenceMM": null,
-                "ringSize": "T.5",
-                "country": "AU"
-            }, {
-                "diameterMM": 20.2,
-                "circumferenceMM": null,
-                "ringSize": "U",
-                "country": "AU"
-            }, {
-                "diameterMM": 20.4,
-                "circumferenceMM": null,
-                "ringSize": "U.5",
-                "country": "AU"
-            }, {
-                "diameterMM": 20.6,
-                "circumferenceMM": null,
-                "ringSize": "V",
-                "country": "AU"
-            }, {
-                "diameterMM": 20.8,
-                "circumferenceMM": null,
-                "ringSize": "V.5",
-                "country": "AU"
-            }, {
-                "diameterMM": 21,
-                "circumferenceMM": null,
-                "ringSize": "W",
-                "country": "AU"
-            }, {
-                "diameterMM": 21.2,
-                "circumferenceMM": null,
-                "ringSize": "W.5",
-                "country": "AU"
-            }, {
-                "diameterMM": 21.4,
-                "circumferenceMM": null,
-                "ringSize": "X",
-                "country": "AU"
-            }, {
-                "diameterMM": 21.6,
-                "circumferenceMM": null,
-                "ringSize": "X.5",
-                "country": "AU"
-            }, {
-                "diameterMM": 21.8,
-                "circumferenceMM": null,
-                "ringSize": "Y",
-                "country": "AU"
-            }, {
-                "diameterMM": 22,
-                "circumferenceMM": null,
-                "ringSize": "Z",
-                "country": "AU"
-            }, {
-                "diameterMM": 22.2,
-                "circumferenceMM": null,
-                "ringSize": "Z.5",
-                "country": "AU"
-            }, {
-                "diameterMM": 14.1,
-                "circumferenceMM": null,
-                "ringSize": "44",
-                "country": "EU"
-            }, {
-                "diameterMM": 14.3,
-                "circumferenceMM": null,
-                "ringSize": "45",
-                "country": "EU"
-            }, {
-                "diameterMM": 14.7,
-                "circumferenceMM": null,
-                "ringSize": "46",
-                "country": "EU"
-            }, {
-                "diameterMM": 14.9,
-                "circumferenceMM": null,
-                "ringSize": "47",
-                "country": "EU"
-            }, {
-                "diameterMM": 15.3,
-                "circumferenceMM": null,
-                "ringSize": "48",
-                "country": "EU"
-            }, {
-                "diameterMM": 15.7,
-                "circumferenceMM": null,
-                "ringSize": "49",
-                "country": "EU"
-            }, {
-                "diameterMM": 15.9,
-                "circumferenceMM": null,
-                "ringSize": "50",
-                "country": "EU"
-            }, {
-                "diameterMM": 16.3,
-                "circumferenceMM": null,
-                "ringSize": "51",
-                "country": "EU"
-            }, {
-                "diameterMM": 16.5,
-                "circumferenceMM": null,
-                "ringSize": "52",
-                "country": "EU"
-            }, {
-                "diameterMM": 16.9,
-                "circumferenceMM": null,
-                "ringSize": "53",
-                "country": "EU"
-            }, {
-                "diameterMM": 17.3,
-                "circumferenceMM": null,
-                "ringSize": "54",
-                "country": "EU"
-            }, {
-                "diameterMM": 17.5,
-                "circumferenceMM": null,
-                "ringSize": "55",
-                "country": "EU"
-            }, {
-                "diameterMM": 17.9,
-                "circumferenceMM": null,
-                "ringSize": "56",
-                "country": "EU"
-            }, {
-                "diameterMM": 18.1,
-                "circumferenceMM": null,
-                "ringSize": "57",
-                "country": "EU"
-            }, {
-                "diameterMM": 18.5,
-                "circumferenceMM": null,
-                "ringSize": "58",
-                "country": "EU"
-            }, {
-                "diameterMM": 18.8,
-                "circumferenceMM": null,
-                "ringSize": "59",
-                "country": "EU"
-            }, {
-                "diameterMM": 19.2,
-                "circumferenceMM": null,
-                "ringSize": "60",
-                "country": "EU"
-            }, {
-                "diameterMM": 19.4,
-                "circumferenceMM": null,
-                "ringSize": "61",
-                "country": "EU"
-            }, {
-                "diameterMM": 19.8,
-                "circumferenceMM": null,
-                "ringSize": "62",
-                "country": "EU"
-            }, {
-                "diameterMM": 20.2,
-                "circumferenceMM": null,
-                "ringSize": "63",
-                "country": "EU"
-            }, {
-                "diameterMM": 20.4,
-                "circumferenceMM": null,
-                "ringSize": "64",
-                "country": "EU"
-            }, {
-                "diameterMM": 20.8,
-                "circumferenceMM": null,
-                "ringSize": "65",
-                "country": "EU"
-            }, {
-                "diameterMM": 21,
-                "circumferenceMM": null,
-                "ringSize": "66",
-                "country": "EU"
-            }, {
-                "diameterMM": 21.4,
-                "circumferenceMM": null,
-                "ringSize": "67",
-                "country": "EU"
-            }, {
-                "diameterMM": 21.8,
-                "circumferenceMM": null,
-                "ringSize": "68",
-                "country": "EU"
-            }, {
-                "diameterMM": 22,
-                "circumferenceMM": null,
-                "ringSize": "69",
-                "country": "EU"
-            }, {
-                "diameterMM": 22.2,
-                "circumferenceMM": null,
-                "ringSize": "70",
-                "country": "EU"
-            }, {
-                "diameterMM": 14.1,
-                "circumferenceMM": null,
-                "ringSize": "4",
-                "country": "JP"
-            }, {
-                "diameterMM": 14.3,
-                "circumferenceMM": null,
-                "ringSize": "5",
-                "country": "JP"
-            }, {
-                "diameterMM": 14.7,
-                "circumferenceMM": null,
-                "ringSize": "6",
-                "country": "JP"
-            }, {
-                "diameterMM": 14.9,
-                "circumferenceMM": null,
-                "ringSize": "7",
-                "country": "JP"
-            }, {
-                "diameterMM": 15.3,
-                "circumferenceMM": null,
-                "ringSize": "8",
-                "country": "JP"
-            }, {
-                "diameterMM": 15.7,
-                "circumferenceMM": null,
-                "ringSize": "9",
-                "country": "JP"
-            }, {
-                "diameterMM": 16.1,
-                "circumferenceMM": null,
-                "ringSize": "10",
-                "country": "JP"
-            }, {
-                "diameterMM": 16.5,
-                "circumferenceMM": null,
-                "ringSize": "11",
-                "country": "JP"
-            }, {
-                "diameterMM": 16.7,
-                "circumferenceMM": null,
-                "ringSize": "12",
-                "country": "JP"
-            }, {
-                "diameterMM": 16.9,
-                "circumferenceMM": null,
-                "ringSize": "13",
-                "country": "JP"
-            }, {
-                "diameterMM": 17.3,
-                "circumferenceMM": null,
-                "ringSize": "14",
-                "country": "JP"
-            }, {
-                "diameterMM": 17.7,
-                "circumferenceMM": null,
-                "ringSize": "15",
-                "country": "JP"
-            }, {
-                "diameterMM": 18.1,
-                "circumferenceMM": null,
-                "ringSize": "16",
-                "country": "JP"
-            }, {
-                "diameterMM": 18.5,
-                "circumferenceMM": null,
-                "ringSize": "17",
-                "country": "JP"
-            }, {
-                "diameterMM": 19,
-                "circumferenceMM": null,
-                "ringSize": "18",
-                "country": "JP"
-            }, {
-                "diameterMM": 19.4,
-                "circumferenceMM": null,
-                "ringSize": "19",
-                "country": "JP"
-            }, {
-                "diameterMM": 19.8,
-                "circumferenceMM": null,
-                "ringSize": "20",
-                "country": "JP"
-            }, {
-                "diameterMM": 20,
-                "circumferenceMM": null,
-                "ringSize": "21",
-                "country": "JP"
-            }, {
-                "diameterMM": 20.2,
-                "circumferenceMM": null,
-                "ringSize": "22",
-                "country": "JP"
-            }, {
-                "diameterMM": 20.6,
-                "circumferenceMM": null,
-                "ringSize": "23",
-                "country": "JP"
-            }, {
-                "diameterMM": 21,
-                "circumferenceMM": null,
-                "ringSize": "24",
-                "country": "JP"
-            }, {
-                "diameterMM": 21.4,
-                "circumferenceMM": null,
-                "ringSize": "25",
-                "country": "JP"
-            }, {
-                "diameterMM": 21.8,
-                "circumferenceMM": null,
-                "ringSize": "26",
-                "country": "JP"
-            }, {
-                "diameterMM": 22.2,
-                "circumferenceMM": null,
-                "ringSize": "27",
-                "country": "JP"
-            }, {
-                "diameterMM": 14.1,
-                "circumferenceMM": null,
-                "ringSize": "4",
-                "country": "NL"
-            }, {
-                "diameterMM": 14.3,
-                "circumferenceMM": null,
-                "ringSize": "5.25",
-                "country": "NL"
-            }, {
-                "diameterMM": 14.7,
-                "circumferenceMM": null,
-                "ringSize": "6\u00bd",
-                "country": "NL"
-            }, {
-                "diameterMM": 15.1,
-                "circumferenceMM": null,
-                "ringSize": "7\u00be",
-                "country": "NL"
-            }, {
-                "diameterMM": 15.5,
-                "circumferenceMM": null,
-                "ringSize": "9",
-                "country": "NL"
-            }, {
-                "diameterMM": 15.9,
-                "circumferenceMM": null,
-                "ringSize": "10",
-                "country": "NL"
-            }, {
-                "diameterMM": 16.3,
-                "circumferenceMM": null,
-                "ringSize": "11\u00be",
-                "country": "NL"
-            }, {
-                "diameterMM": 16.5,
-                "circumferenceMM": null,
-                "ringSize": "12\u00be",
-                "country": "NL"
-            }, {
-                "diameterMM": 16.9,
-                "circumferenceMM": null,
-                "ringSize": "14",
-                "country": "NL"
-            }, {
-                "diameterMM": 17.3,
-                "circumferenceMM": null,
-                "ringSize": "15\u00bc",
-                "country": "NL"
-            }, {
-                "diameterMM": 17.7,
-                "circumferenceMM": null,
-                "ringSize": "16\u00bd",
-                "country": "NL"
-            }, {
-                "diameterMM": 18.1,
-                "circumferenceMM": null,
-                "ringSize": "17\u00be",
-                "country": "NL"
-            }, {
-                "diameterMM": 18.8,
-                "circumferenceMM": null,
-                "ringSize": "19",
-                "country": "NL"
-            }, {
-                "diameterMM": 19.2,
-                "circumferenceMM": null,
-                "ringSize": "20\u00bc",
-                "country": "NL"
-            }, {
-                "diameterMM": 19.6,
-                "circumferenceMM": null,
-                "ringSize": "21\u00bd",
-                "country": "NL"
-            }, {
-                "diameterMM": 20.2,
-                "circumferenceMM": null,
-                "ringSize": "22\u00be",
-                "country": "NL"
-            }, {
-                "diameterMM": 20.8,
-                "circumferenceMM": null,
-                "ringSize": "25",
-                "country": "NL"
-            }, {
-                "diameterMM": 21,
-                "circumferenceMM": null,
-                "ringSize": "24",
-                "country": "NL"
-            }, {
-                "diameterMM": 21.4,
-                "circumferenceMM": null,
-                "ringSize": "27\u00bd",
-                "country": "NL"
-            }, {
-                "diameterMM": 21.8,
-                "circumferenceMM": null,
-                "ringSize": "28\u00be",
-                "country": "NL"
-            }, {
-                "diameterMM": 13.1,
-                "circumferenceMM": null,
-                "ringSize": "1",
-                "country": "IN"
-            }, {
-                "diameterMM": 13.3,
-                "circumferenceMM": null,
-                "ringSize": "2",
-                "country": "IN"
-            }, {
-                "diameterMM": 13.7,
-                "circumferenceMM": null,
-                "ringSize": "3",
-                "country": "IN"
-            }, {
-                "diameterMM": 13.9,
-                "circumferenceMM": null,
-                "ringSize": "4",
-                "country": "IN"
-            }, {
-                "diameterMM": 14.3,
-                "circumferenceMM": null,
-                "ringSize": "5",
-                "country": "IN"
-            }, {
-                "diameterMM": 14.7,
-                "circumferenceMM": null,
-                "ringSize": "6",
-                "country": "IN"
-            }, {
-                "diameterMM": 15.1,
-                "circumferenceMM": null,
-                "ringSize": "7",
-                "country": "IN"
-            }, {
-                "diameterMM": 15.3,
-                "circumferenceMM": null,
-                "ringSize": "8",
-                "country": "IN"
-            }, {
-                "diameterMM": 15.5,
-                "circumferenceMM": null,
-                "ringSize": "9",
-                "country": "IN"
-            }, {
-                "diameterMM": 15.9,
-                "circumferenceMM": null,
-                "ringSize": "10",
-                "country": "IN"
-            }, {
-                "diameterMM": 16.3,
-                "circumferenceMM": null,
-                "ringSize": "11",
-                "country": "IN"
-            }, {
-                "diameterMM": 16.5,
-                "circumferenceMM": null,
-                "ringSize": "12",
-                "country": "IN"
-            }, {
-                "diameterMM": 16.9,
-                "circumferenceMM": null,
-                "ringSize": "13",
-                "country": "IN"
-            }, {
-                "diameterMM": 17.3,
-                "circumferenceMM": null,
-                "ringSize": "14",
-                "country": "IN"
-            }, {
-                "diameterMM": 17.5,
-                "circumferenceMM": null,
-                "ringSize": "15",
-                "country": "IN"
-            }, {
-                "diameterMM": 17.9,
-                "circumferenceMM": null,
-                "ringSize": "16",
-                "country": "IN"
-            }, {
-                "diameterMM": 18.1,
-                "circumferenceMM": null,
-                "ringSize": "17",
-                "country": "IN"
-            }, {
-                "diameterMM": 18.5,
-                "circumferenceMM": null,
-                "ringSize": "18",
-                "country": "IN"
-            }, {
-                "diameterMM": 18.8,
-                "circumferenceMM": null,
-                "ringSize": "19",
-                "country": "IN"
-            }, {
-                "diameterMM": 19.2,
-                "circumferenceMM": null,
-                "ringSize": "20",
-                "country": "IN"
-            }, {
-                "diameterMM": 19.4,
-                "circumferenceMM": null,
-                "ringSize": "21",
-                "country": "IN"
-            }, {
-                "diameterMM": 19.8,
-                "circumferenceMM": null,
-                "ringSize": "22",
-                "country": "IN"
-            }, {
-                "diameterMM": 20,
-                "circumferenceMM": null,
-                "ringSize": "23",
-                "country": "IN"
-            }, {
-                "diameterMM": 20.4,
-                "circumferenceMM": null,
-                "ringSize": "24",
-                "country": "IN"
-            }, {
-                "diameterMM": 20.6,
-                "circumferenceMM": null,
-                "ringSize": "25",
-                "country": "IN"
-            }, {
-                "diameterMM": 21,
-                "circumferenceMM": null,
-                "ringSize": "26",
-                "country": "IN"
-            }, {
-                "diameterMM": 21.4,
-                "circumferenceMM": null,
-                "ringSize": "27",
-                "country": "IN"
-            }, {
-                "diameterMM": 21.6,
-                "circumferenceMM": null,
-                "ringSize": "28",
-                "country": "IN"
-            }, {
-                "diameterMM": 22,
-                "circumferenceMM": null,
-                "ringSize": "29",
-                "country": "IN"
-            }, {
-                "diameterMM": 22.3,
-                "circumferenceMM": null,
-                "ringSize": "30",
-                "country": "IN"
+                "ringSize": "Z 1",
+                "country": "GB",
+                "MM": "69.7"
             }];
             var countryCode = "US";
             var flagsURL = "https://ringsizer.hautecarat.com/images/flags/";
@@ -2763,24 +1676,76 @@
                 // Select the element you want to observe
                 const usRingSizeElement = document.querySelector('.us-ring-size');
 
+                // Function to update the ring size display
+                function updateRingSizeDisplay() {
+                    const activeCountry = document.querySelector('.ring-size-country-text.active').getAttribute('country');
+                    const size = usRingSizeElement.textContent;
+                    
+                    // console.log('size:', size);
+                    // console.log('activeCountry: ', activeCountry);
+
+                    let usRingSize = ringSizeMapping.find(ring => ring.ringSize === size && ring.country === 'US');
+                    let gbRingSize;
+
+                    if (usRingSize) {
+                        gbRingSize = ringSizeMapping.find(ring => ring.MM === usRingSize.MM && ring.country === 'GB');
+                    }
+
+                    document.querySelectorAll(".ring-sizer-counter").forEach(function(element) {
+                        if (activeCountry === 'GB' && gbRingSize) {
+                            element.querySelector('.ring-sizer-counter-measure').style.display = 'none';
+                            element.querySelector('.ring-sizer-counter-digits').textContent = gbRingSize.ringSize;
+                        } else if (activeCountry === 'US' && usRingSize) {
+                            element.querySelector('.ring-sizer-counter-measure').style.display = 'none';
+                            element.querySelector('.ring-sizer-counter-digits').textContent = usRingSize.ringSize;
+                        } else {
+                            element.querySelector('.ring-sizer-counter-measure').style.display = 'contents';
+                            element.querySelector('.ring-sizer-counter-digits').textContent = gbRingSize.MM;
+                        }
+                    });
+                }
+
                 // Create a MutationObserver to watch for text changes
                 const observer = new MutationObserver((mutations) => {
                     mutations.forEach((mutation) => {
                         if (mutation.type === 'characterData' || mutation.type === 'childList') {
-                            console.log('The .us-ring-size text has changed:', usRingSizeElement.textContent);
-                            document.querySelectorAll(".ring-sizer-counter-digits").forEach(function(element) {
-                                element.textContent = usRingSizeElement.textContent;
-                            });
+                            updateRingSizeDisplay();
                         }
                     });
                 });
 
-                // Set up the observer to monitor changes to the text content
                 observer.observe(usRingSizeElement, {
                     characterData: true,
                     subtree: true,
                     childList: true
                 });
+
+                // Country change function
+                const ringSizeCountryElements = document.querySelectorAll('.ring-size-country-text');
+                function handleCountryClick(event) {
+                    ringSizeCountryElements.forEach(element => {
+                        // console.log("element: ", element);
+                        element.classList.remove('active');
+                    });
+                    // Get the list of classes from the event target
+                    var active_classes = event.target.classList.value;
+
+                    // Find all elements that have the same classes as the event target
+                    var elements = document.querySelectorAll('.' + active_classes.split(' ').join('.'));
+
+                    // Loop through all found elements and add the 'active' class
+                    elements.forEach(function(element) {
+                        element.classList.add('active');
+                    });
+
+
+                    // Update ring size display on country change
+                    updateRingSizeDisplay();
+                }
+                ringSizeCountryElements.forEach(element => {
+                    element.addEventListener('click', handleCountryClick);
+                });
+
 
                 var shareCalibrationPage = document.getElementById("share_calibration_page");
                 var lastCalibrationPage = document.getElementById("last_calibration_page");
@@ -2893,48 +1858,8 @@
             </div>
         </section>
         <!-- End Init Landing Page  -->
-        <div id="country_change_page" class="page" style="display:none;">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 col-12">
-                        <div class="main-wrapper">
-                            <p class="heading"> Select your country from the below list for which you want to find the ring size. </p>
-                            <div class="country-list">
-                                <div class="country-list-item" data-code="US" data-image="united-states.svg">
-                                    <img src="https://ringsizer.hautecarat.com/images/flags/united-states.svg" alt="United States">United States
-                                </div>
-                                <div class="country-list-item" data-code="CA" data-image="canada.svg">
-                                    <img src="https://ringsizer.hautecarat.com/images/flags/canada.svg" alt="Canada">Canada
-                                </div>
-                                <div class="country-list-item" data-code="NL" data-image="netherlands.svg">
-                                    <img src="https://ringsizer.hautecarat.com/images/flags/netherlands.svg" alt="Netherlands">Netherlands
-                                </div>
-                                <div class="country-list-item" data-code="GB" data-image="united-kingdom.svg">
-                                    <img src="https://ringsizer.hautecarat.com/images/flags/united-kingdom.svg" alt="United Kingdom">United Kingdom
-                                </div>
-                                <div class="country-list-item" data-code="EU" data-image="european-union.svg">
-                                    <img src="https://ringsizer.hautecarat.com/images/flags/european-union.svg" alt="Europe">Europe
-                                </div>
-                                <div class="country-list-item" data-code="JP" data-image="japan.svg">
-                                    <img src="https://ringsizer.hautecarat.com/images/flags/japan.svg" alt="Japan">Japan
-                                </div>
-                                <div class="country-list-item" data-code="AU" data-image="australia.svg">
-                                    <img src="https://ringsizer.hautecarat.com/images/flags/australia.svg" alt="Australia">Australia
-                                </div>
-                                <div class="country-list-item" data-code="IN" data-image="india.svg">
-                                    <img src="https://ringsizer.hautecarat.com/images/flags/india.svg" alt="India">India
-                                </div>
-                            </div>
-                            <div class="button-wrapper">
-                                <button class="theme-btn btn-go-to-back">Back</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- Start Init Calibration Page -->
-        <section id="init_calibration_page" class="page" style="">
+        <section id="init_calibration_page" class="page" style="display: none;">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="row-col">
@@ -3013,14 +1938,14 @@
                                         <img src="ring-gold-drop.png" class="ring-image-last" alt="Ring">
                                     </div>
                                     <span class="ring-sizer-counter">
-                                        <span class="ring-sizer-counter-digits">4.5</span><span>mm</span>
+                                        <span class="ring-sizer-counter-digits">4.5</span><span class="ring-sizer-counter-measure">mm</span>
                                     </span>
                                 </div>
                             </div>
                             <div class="ring-size-country-change">
-                                <div class="ring-size-country-text ring-size-country-eur">EUR</div>
-                                <div class="ring-size-country-text ring-size-country-usa">USA</div>
-                                <div class="ring-size-country-text ring-size-country-mm active">mm</div>
+                                <div class="ring-size-country-text ring-size-country-eur" country="GB">EUR</div>
+                                <div class="ring-size-country-text ring-size-country-usa active" country="US">USA</div>
+                                <div class="ring-size-country-text ring-size-country-mm" country="mm">mm</div>
                             </div>
                             <div class="ring-sizer-buttons-main">
                                 <button class="theme-btn white-btn btn-go-to width-50" data-page="ring_size_calculator_page">BACK</button>
@@ -3051,14 +1976,14 @@
                                         <img src="ring-gold-drop.png" class="ring-image-last" alt="Ring">
                                     </div>
                                     <span class="ring-sizer-counter">
-                                        <span class="ring-sizer-counter-digits">4.5</span><span>mm</span>
+                                        <span class="ring-sizer-counter-digits">4.5</span><span class="ring-sizer-counter-measure">mm</span>
                                     </span>
                                 </div>
                             </div>
                             <div class="ring-size-country-change">
-                                <div class="ring-size-country-text ring-size-country-eur">EUR</div>
-                                <div class="ring-size-country-text ring-size-country-usa">USA</div>
-                                <div class="ring-size-country-text ring-size-country-mm active">mm</div>
+                                <div class="ring-size-country-text ring-size-country-eur" country="GB">EUR</div>
+                                <div class="ring-size-country-text ring-size-country-usa" country="US">USA</div>
+                                <div class="ring-size-country-text ring-size-country-mm active" country="mm">mm</div>
                             </div>
                             <p class="italic">Explore Hautecarat's Stunning Ring Collections</p>
                             <div class="ring-sizer-buttons-main">
@@ -3127,7 +2052,9 @@
                             <div class="ring-size-wrapper">
                                 <div class="ring-sizer-wrapper">
                                     <div class="ring-sizer" style="height: 80px; width: 80px;">
-                                        <span class="ring-sizer-counter"><span class="ring-sizer-counter-digits">4.5</span><span>mm</span></span>
+                                        <span class="ring-sizer-counter">
+                                            <span class="ring-sizer-counter-digits">4.5</span><span class="ring-sizer-counter-measure">mm</span>
+                                        </span>
                                         <!-- <div class="left-line"></div>
                                         <div class="top-line"></div>
                                         <div class="right-line"></div>
@@ -3135,9 +2062,9 @@
                                     </div>
                                 </div>
                                 <div class="ring-size-country-change">
-                                    <div class="ring-size-country-text ring-size-country-eur">EUR</div>
-                                    <div class="ring-size-country-text ring-size-country-usa">USA</div>
-                                    <div class="ring-size-country-text ring-size-country-mm active">mm</div>
+                                    <div class="ring-size-country-text ring-size-country-eur" country="GB">EUR</div>
+                                    <div class="ring-size-country-text ring-size-country-usa" country="US">USA</div>
+                                    <div class="ring-size-country-text ring-size-country-mm active" country="mm">mm</div>
                                 </div>
                                 <div class="message"></div>
                                 <div class="main-range-section range-progress-bar">
@@ -3151,18 +2078,16 @@
                                         <button class="theme-btn black-btn done-btn btn-go-to width-50" data-page="last_calibration_page">DONE</button>
                                     </div>
                                 </div>
-                                <div class="size-wrapper" style="display:none;">
+                                <div class="size-wrapper" style="display: none">
                                     <p>Your Ring Size is</p>
                                     <div class="ring-measurement-wrapper">
                                         <div class="us-ring-size-caption">
-                                            <img src="https://ringsizer.hautecarat.com/images/flags/united-states.svg" class="country-flag" alt="United
-                                              States Flag Icon">
+                                            <img src="https://ringsizer.hautecarat.com/images/flags/united-states.svg" class="country-flag" alt="United States Flag Icon">
                                             <span class="country-caption">US</span>
                                             <span class="us-ring-size">3</span>
                                         </div>
-                                        <div class="ring-size-caption" style="display:none;">
-                                            <img src="" class="country-flag">
-                                            <span class="country-caption">US</span>
+                                        <div class="ring-size-caption">
+                                            <span class="country-caption">UK</span>
                                             <span class="ring-size">3</span>
                                         </div>
                                     </div>
