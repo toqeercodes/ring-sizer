@@ -225,7 +225,7 @@
                 width: 100%;
             }
 
-            #init_calibration_page {
+            #init_calibration_page .container {
                 display: block;
                 /* Make sure the section is visible (remove this if you want the display: none functionality) */
                 width: 100%;
@@ -1048,7 +1048,7 @@
 
             .page-header {
                 display: flex;
-                justify-content: space-between;
+                justify-content: end;
                 align-items: center;
                 padding: 15px 25px;
             }
@@ -1898,9 +1898,6 @@
         
         <!-- Start Header -->
             <div class="page-header">
-                <div class="company-logo">
-                    <img src="https://ringsizer.hautecarat.com/images/logos/haute-carat.svg" alt="Haute Carat">
-                </div>
                 <!-- Start Close Button -->
                 <div class="btn-close" onclick="close_iframe();">
                     <svg class="desktop-icon-close" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -1924,8 +1921,7 @@
                         <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_92_2" result="shape"/>
                         </filter>
                         </defs>
-                        </svg>
-
+                    </svg>
                 </div>
                 <!-- End Close Button -->
             </div>
