@@ -1183,6 +1183,122 @@
                 border-color: #000000;
             }
             /*-------------------*/
+
+            /*SOCIAL MEDIA ICONS*/
+            .social-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0;
+            }
+
+            .social-button {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            outline: none;
+            width: 64px;
+            height: 64px;
+            text-decoration: none;
+            border-radius: 100%;
+            background: #fff;
+            text-align: center;
+            }
+            .social-button::after {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            display: block;
+            width: 0;
+            height: 0;
+            border-radius: 100%;
+            transition: 0.3s;
+            }
+            .social-button:focus, .social-button:hover {
+            color: #fff;
+            }
+            .social-button:focus::after, .social-button:hover::after {
+            width: calc(100% + 2px);
+            height: calc(100% + 2px);
+            margin-left: calc(-50% - 1px);
+            }
+            .social-button i,
+            .social-button svg {
+            position: relative;
+            z-index: 1;
+            transition: 0.3s;
+            }
+            .social-button i {
+            font-size: 25.6px;
+            }
+            .social-button svg {
+            height: 40%;
+            width: 40%;
+            }
+            .social-button--mail {
+            color: #0072c6;
+            }
+            .social-button--mail::after {
+            background: #0072c6;
+            }
+            .social-button--facebook {
+            color: #3b5999;
+            }
+            .social-button--facebook::after {
+            background: #3b5999;
+            }
+            .social-button--linkedin {
+            color: #0077b5;
+            }
+            .social-button--linkedin::after {
+            background: #0077b5;
+            }
+            .social-button--github {
+            color: #6e5494;
+            }
+            .social-button--github::after {
+            background: #6e5494;
+            }
+            .social-button--codepen {
+            color: #212121;
+            }
+            .social-button--codepen::after {
+            background: #212121;
+            }
+            .social-button--steam {
+            color: #7da10e;
+            }
+            .social-button--steam::after {
+            background: #7da10e;
+            }
+            .social-button--snapchat {
+            color: #eec900;
+            }
+            .social-button--snapchat::after {
+            background: #eec900;
+            }
+            .social-button--twitter {
+            color: #55acee;
+            }
+            .social-button--twitter::after {
+            background: #55acee;
+            }
+            .social-button--instagram {
+            color: #e4405f;
+            }
+            .social-button--instagram::after {
+            background: #e4405f;
+            }
+            .social-button--npmjs {
+            color: #c12127;
+            }
+            .social-button--npmjs::after {
+            background: #c12127;
+            }
+
         </style>
         <script>
             var ringSizeMapping = [{
@@ -1763,14 +1879,6 @@
                 var shareCalibrationPage = document.getElementById("share_calibration_page");
                 var lastCalibrationPage = document.getElementById("last_calibration_page");
 
-                function checkAndApplyPadding() {
-                    if (window.getComputedStyle(shareCalibrationPage).display === "block" || 
-                        window.getComputedStyle(lastCalibrationPage).display === "block") {
-                        document.body.style.marginTop = "100px";
-                    } else {
-                        document.body.style.marginTop = "";
-                    }
-                }
 
                 var section_observer = new MutationObserver(checkAndApplyPadding);
 
@@ -1780,9 +1888,6 @@
                 if (lastCalibrationPage) {
                     section_observer.observe(lastCalibrationPage, { attributes: true, attributeFilter: ['style'] });
                 }
-
-                checkAndApplyPadding();
-
             });
         </script>
     </head>
@@ -1966,6 +2071,21 @@
                                 <div class="ring-size-country-text ring-size-country-mm active" country="mm">mm</div>
                             </div>
                             <p class="italic">Explore Hautecarat's Stunning Ring Collections</p>
+                            <div class="social-buttons">
+                                <a href="#" class="social-button social-button--facebook" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-button social-button--linkedin" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-button social-button--instagram" aria-label="instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-button social-button--mail" aria-label="mail">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                
+                            </div>
                             <div class="ring-sizer-buttons-main">
                                 <button class="theme-btn black-btn btn-go-to last-done-btn">VISIT WEBSITE</button>
                             </div>
@@ -2241,7 +2361,7 @@
         font-size: 12px !important;
         }
         #last_calibration_page, #share_calibration_page {
-     padding: 0px !important;
+     padding-top: 100px !important;
         }
         #last_calibration_page .main-wrapper-text-wrapper{
             margin-top: 70px;
