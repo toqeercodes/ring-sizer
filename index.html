@@ -1669,6 +1669,12 @@
             #init_calibration_page .theme-btn.black-btn{
                 padding: 12px 20px;
             }
+            #card_calibration_page .row, #ring_size_calculator_page .row{
+                margin-top: 125px;
+            }
+            #card_calibration_page .main-wrapper-text-wrapper, #ring_size_calculator_page .main-wrapper-text-wrapper{
+                width: 300px;
+            }
         </style>
 
         <script>
@@ -1753,9 +1759,9 @@
                 function checkAndApplyPadding() {
                     if (window.getComputedStyle(shareCalibrationPage).display === "block" || 
                         window.getComputedStyle(lastCalibrationPage).display === "block") {
-                        document.body.style.padding = "100px 440px";
+                        document.body.style.marginTop = "100px";
                     } else {
-                        document.body.style.padding = "";
+                        document.body.style.marginTop = "";
                     }
                 }
 
