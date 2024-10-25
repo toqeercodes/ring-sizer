@@ -232,10 +232,17 @@
                 height: 560px;
                 background: url('ring-image.png') no-repeat center center/cover;
                 /* Background image with cover */
-                position: relative;
                 /* Positioning for the button */
                 background-size: 100% 100%;
             }
+            .container{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+
 
             .row-col {
                 position: absolute;
@@ -1795,9 +1802,6 @@
             }
             #init_calibration_page .theme-btn.black-btn{
                 padding: 12px 20px;
-            }
-            .row.justify-content-center{
-                padding-top: 30px;
             }
             #card_calibration_page .main-wrapper-text-wrapper, #ring_size_calculator_page .main-wrapper-text-wrapper{
                 width: 300px;
