@@ -8,7 +8,6 @@
         <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>Ring Size Calculator</title>
         <link rel="stylesheet" href="https://ringsizer.hautecarat.com/css/bootstrap.min.css">
-
         <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.1/css/all.css'><link rel="stylesheet" href="./style.css">
         <style>
             @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
@@ -23,27 +22,10 @@
                 height: 100%;
                 font-family: "Montserrat", sans-serif;
                 position: relative;
-                /* padding: 90px 155px; */
                 margin: 0;
                 color: #000000;
                 background: #f9f9f9;
             }
-
-            /* .btn-close {
-                position: absolute;
-                top: 10px;
-                right: 20px;
-                height: 40px;
-                padding: 5px 12px 5px 19px;
-                cursor: pointer;
-                font-size: 14px;
-                vertical-align: middle;
-                background: #000000;
-                color: #ffffff;
-                line-height: 30px;
-                border-radius: 20px;
-                z-index: 1;
-            } */
             .btn-close img {
                 width: 20px;
                 display: inline-block;
@@ -225,24 +207,13 @@
                 width: 100%;
             }
 
-            #init_calibration_page .container {
+            #init_calibration_page {
                 display: block;
-                /* Make sure the section is visible (remove this if you want the display: none functionality) */
                 width: 100%;
-                height: 560px;
                 background: url('ring-image.png') no-repeat center center/cover;
-                /* Background image with cover */
-                /* Positioning for the button */
+                position: relative;
                 background-size: 100% 100%;
             }
-            .container{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-
-
 
             .row-col {
                 position: absolute;
@@ -256,7 +227,6 @@
 
             /* End country change page */
             /* Start init calibration page */
-            /*#init_calibration_page .heading{text-align: center;font-size:14px;font-weight:500;margin-top:20px;}*/
             #init_calibration_page .company {
                 margin-top: 10px;
             }
@@ -765,16 +735,12 @@
             }
 
             #ring_size_calculator_page .ring-sizer-wrapper {
-                height: 180px;
+                height: 225px;
                 width: 300px;
                 margin: auto;
                 overflow: hidden;
                 display: flex;
                 align-items: center;
-                /* border: solid 1px #c6c6c6; */
-                /* background: url("https://ringsizer.hautecarat.com/images/app/grid.svg") center center repeat; */
-                /* -ms-touch-action: none;
-                touch-action: none; */
             }
 
             #ring_size_calculator_page .ring-sizer-wrapper .ring-sizer {
@@ -789,7 +755,6 @@
                 display: block;
                 max-width: 180px;
                 max-height: 180px;
-                /* border: solid 1px #5e7173; */
             }
 
             #ring_size_calculator_page .ring-sizer-wrapper .ring-sizer .left-line {
@@ -1003,9 +968,6 @@
                 text-decoration: underline;
                 color: #000000;
             }
-
-            /* End ring size calculator_page */
-            /* Video Guide Modal */
             .video-guide {
                 position: absolute;
                 top: 0;
@@ -1055,10 +1017,9 @@
 
             .page-header {
                 display: flex;
-                justify-content: end;
+                justify-content: space-between;
                 align-items: center;
-                padding: 15px 70px;
-                padding-top: 60px;
+                padding: 15px 25px;
             }
             .main-wrapper{
                 display: flex;
@@ -1110,16 +1071,16 @@
                 align-items: center;
             }
             #last_calibration_page .ring-sizer-buttons-main{
-                padding: 0px 85px;
+                padding: 0px 35%;
+
             }
             #last_calibration_page .theme-btn.black-btn:hover svg path{
-    stroke: black !important;
-}
+                stroke: black !important;
+            }
 
             .ring-sizer-button-back{
                 border: 1px solid black;
                 border-radius: 3px;
-                /* width: 60px; */
                 padding: 6px 30px;
                 background: white;
             }
@@ -1149,16 +1110,8 @@
             .last_calibration_page_img{
                 text-align: center;
             }
-
-            /* .last_calibration_page_img_counter .ring-sizer-counter{
-                top: 52%;
-                position: absolute;
-                left: 44%;
-                font-size: 20px !important;
-                padding: 8px 15px !important;
-            } */
             .last_calibration_page_img_counter {
-                position: relative; /* Needed for absolute positioning of the counter */
+                position: relative;
                 display: inline-block;
             }
 
@@ -1170,7 +1123,7 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%); /* Center the counter */
+                transform: translate(-50%, -50%);
                 font-size: 20px !important;
                 padding: 8px 15px !important;
             }
@@ -1308,7 +1261,6 @@
             .social-button--npmjs::after {
             background: #c12127;
             }
-
         </style>
         <script>
             var ringSizeMapping = [{
@@ -1687,9 +1639,9 @@
                 max-width: 100%;
             }
 
-            /* .container {
-                height: 560px;
-            } */
+            .container {
+                height: 100%;
+            }
 
             .row-col-first {
                 width: 400px;
@@ -1738,14 +1690,6 @@
             }
             .ring-sizer-buttons-main .theme-btn{
                 height: 48px;
-                
-            }
-            #last_calibration_page .theme-btn{
-                width: 200px;
-            }
-            #last_calibration_page, #share_calibration_page{
-                overflow: hidden;
-                padding-top: 30px;
             }
 
             #card_calibration_page .text-wrapper-heading,
@@ -1771,8 +1715,13 @@
                 font-family: "lora";
                 text-align: center;
             }
+            @media(max-width: 768px){
+                .last-done-btn{
+                    padding: 12px 10px !important;
+                }
+            }
             .last-done-btn{
-                padding: 12px 65px !important;
+                padding: 12px 65px;
             }
             .ring-size-country-change{
                 display: flex;
@@ -1803,23 +1752,15 @@
             #init_calibration_page .theme-btn.black-btn{
                 padding: 12px 20px;
             }
-            #card_calibration_page .main-wrapper-text-wrapper, #ring_size_calculator_page .main-wrapper-text-wrapper{
-                width: 300px;
-            }
         </style>
 
         <script>
             document.addEventListener('DOMContentLoaded', () => {
-                // Select the element you want to observe
                 const usRingSizeElement = document.querySelector('.us-ring-size');
 
-                // Function to update the ring size display
                 function updateRingSizeDisplay() {
                     const activeCountry = document.querySelector('.ring-size-country-text.active').getAttribute('country');
                     const size = usRingSizeElement.textContent;
-                    
-                    // console.log('size:', size);
-                    // console.log('activeCountry: ', activeCountry);
 
                     let usRingSize = ringSizeMapping.find(ring => ring.ringSize === size && ring.country === 'US');
                     let gbRingSize;
@@ -1842,7 +1783,6 @@
                     });
                 }
 
-                // Create a MutationObserver to watch for text changes
                 const observer = new MutationObserver((mutations) => {
                     mutations.forEach((mutation) => {
                         if (mutation.type === 'characterData' || mutation.type === 'childList') {
@@ -1861,95 +1801,23 @@
                 const ringSizeCountryElements = document.querySelectorAll('.ring-size-country-text');
                 function handleCountryClick(event) {
                     ringSizeCountryElements.forEach(element => {
-                        // console.log("element: ", element);
                         element.classList.remove('active');
                     });
-                    // Get the list of classes from the event target
                     var active_classes = event.target.classList.value;
-
-                    // Find all elements that have the same classes as the event target
                     var elements = document.querySelectorAll('.' + active_classes.split(' ').join('.'));
-
-                    // Loop through all found elements and add the 'active' class
                     elements.forEach(function(element) {
                         element.classList.add('active');
                     });
-
-
-                    // Update ring size display on country change
                     updateRingSizeDisplay();
                 }
                 ringSizeCountryElements.forEach(element => {
                     element.addEventListener('click', handleCountryClick);
                 });
 
-
-                var shareCalibrationPage = document.getElementById("share_calibration_page");
-                var lastCalibrationPage = document.getElementById("last_calibration_page");
-
-
-                var section_observer = new MutationObserver(checkAndApplyPadding);
-
-                if (shareCalibrationPage) {
-                    section_observer.observe(shareCalibrationPage, { attributes: true, attributeFilter: ['style'] });
-                }
-                if (lastCalibrationPage) {
-                    section_observer.observe(lastCalibrationPage, { attributes: true, attributeFilter: ['style'] });
-                }
             });
         </script>
     </head>
     <body __processed_a542ac49-a136-41a5-ac10-af0bb84f8095__="true" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQiLCJMSU5LRURJTiI6ImRpc2FibGVkIiwiQ09ORklHIjoiZGlzYWJsZWQifSwidmVyc2lvbiI6IjIuMC4xNiIsInNjb3JlIjoyMDAxNn1d" cz-shortcut-listen="true">
-        <!-- Start Init Landing Page -->
-        <section id="init_landing_page" class="page" style="display:none;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                        <div class="company-logo">
-                            <img src="https://ringsizer.hautecarat.com/images/logos/haute-carat.svg" alt="Haute Carat">
-                        </div>
-                        <div class="heading">
-                            <span class="thin">Digital</span> Ring Sizer
-                        </div>
-                        <div class="subheading">Choose how you'd like to find your ring size</div>
-                    </div>
-                    <div class="col-12 col-xs-12 col-sm-6 col-md-6 col-lg-6
-                        col-xl-6 d-none d-md-block">
-                        <img src="https://ringsizer.hautecarat.com/images/app/ring-image.png" class="ring-image" alt="Ring">
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12
-                        col-xl-12">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-xs-12 col-sm-3 col-md-3
-                                col-lg-3 col-xl-3">
-                                <div class="app-link" data-page="ring_size_calculator_page">
-                                    <img src="https://ringsizer.hautecarat.com/images/app/use-a-ring-that-fits-icon.svg" class="icon" alt="Use a ring that fits">
-                                    <div class="text">Find size using <br>an existing ring! </div>
-                                    <div class="sub-text">Use existing ring <img src="https://ringsizer.hautecarat.com/images/app/right-arrow-icon.svg" alt="Right arrow">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-xs-12 col-sm-3 col-md-3
-                                col-lg-3 col-xl-3">
-                                <a class="app-link" href="https://cdn.shopify.com/s/files/1/0257/2432/1874/files/ringsizer-guide.pdf" target="_blank">
-                                    <img src="https://ringsizer.hautecarat.com/images/app/printable-ring-sizer.svg" class="icon" alt="Use the printable ring
-                                        sizer">
-                                    <div class="text">Printable <br>ring sizer </div>
-                                    <div class="sub-text">Download our PDF <img src="https://ringsizer.hautecarat.com/images/app/right-arrow-icon.svg" alt="Right arrow">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="actions-wrapper">
-                            <a href="#" class="btn-change-country">Change Country ( <span class="country-name">United States</span>) </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Init Landing Page  -->
         <!-- Start Init Calibration Page -->
         <section id="init_calibration_page" class="page" style="display: none;">
             <div class="container">
@@ -1977,9 +1845,9 @@
         <!-- End Init Calibration Page  -->
         <!-- Start Card Calibration Page -->
         <section id="card_calibration_page" class="page" style="display: none;">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row justify-content-center">
-                    <div class="col-md-6 col-lg-6 col-sm-9 col-xs-12 col-12 main-wrapper-column p-0 first-one">
+                    <div class="col-md-6 col-lg-6 col-sm-9 col-xs-12 col-12 main-wrapper-column p-0">
                         <div class="main-wrapper">
                             <img src="column-image-1.png" class="ring-image" alt="Ring">
                             <div class="main-wrapper-text-wrapper">
@@ -2021,7 +1889,6 @@
                 <div class="row justify-content-center">
                     <div class="col-md-12 col-lg-12 col-sm-9 col-xs-12 col-12 main-wrapper-column">
                         <div class="main-wrapper">
-                            <!-- <img src="Rectangle 154.png" class="ring-image" alt="Ring"> -->
                             <div class="main-wrapper-text-wrapper">
                                 <h5 class="text-wrapper-subheading">You just found your exact ring size!</h5>
                                 <p class="italic">Share your ring size with friends and loved ones.</p>
@@ -2102,48 +1969,11 @@
             </div>
         </section>
         <!-- End Last Calibration Page  -->
-        <!-- Start Ruler Calibration Page -->
-        <section id="scale_calibration_page" class="page main-ring-section" style="display:none;">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8 col-lg-8 col-sm-9 col-xs-12 col-12 main-wrapper-column">
-                        <div class="main-wrapper text-center">
-                            <div class="heading">Step 1 – Calibrate to Ruler Size</div>
-                            <p class="sub-heading"> Using the centimeter measurement on top, physically place your ruler over the image, aligning 0 to 0. Then, use the scroll bar (+ and -) underneath to match the numbers on the screen to the numbers on your ruler. <img src="https://ringsizer.hautecarat.com/images/app/info-icon.svg" class="info-icon btn-show-video-guide" title="Show Guide" alt="Information Icon">
-                            </p>
-                            <div class="unit-tabs">
-                                <div class="tab mm active" data-unit="mm">CM</div>
-                                <div class="tab inch" data-unit="inch">Inch</div>
-                            </div>
-                            <div class="mm-scale-image-wrapper" style="background-size: 942px;"></div>
-                            <div class="inch-scale-image-wrapper" style="background-size: 942px;display:none;"></div>
-                            <div class="scale-placeholder-wrapper">Place your ruler here</div>
-                            <div class="main-range-section range-progress-bar">
-                                <div class="step-button" id="scale_resize_decrease">-</div>
-                                <div class="line range-wrapper">
-                                    <input type="range" name="qty" step="2" min="500" max="2000" value="942" class="progress qty" id="scale_resize_range">
-                                </div>
-                                <div class="step-button" id="scale_resize_increase">+</div>
-                            </div>
-                            <div class="button-wrapper">
-                                <button class="theme-btn white-btn btn-go-to" data-page="init_calibration_page">BACK</button>
-                                <button class="theme-btn btn-save-calibration">NEXT</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Ruler Calibration Page -->
-        <!-- Start Measure Your Finger Page -->
-        <!-- End Measure Your Finger Page  -->
-        <!-- Start Convert From Other Units Page -->
-        <!-- End Convert From Other Units Page -->
         <!-- Start Ring Size Calculator Page -->
         <section id="ring_size_calculator_page" class="page" style="display: none;">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row justify-content-center">
-                    <div class="col-md-6 col-lg-6 col-sm-8 col-xs-12 col-12 p-0 first-one">
+                    <div class="col-md-6 col-lg-6 col-sm-8 col-xs-12 col-12 p-0">
                         <div class="main-wrapper">
                             <img src="column-image-2.png" class="ring-image" alt="Ring">
                             <div class="main-wrapper-text-wrapper">
@@ -2162,10 +1992,6 @@
                                         <span class="ring-sizer-counter">
                                             <span class="ring-sizer-counter-digits">4.5</span><span class="ring-sizer-counter-measure">mm</span>
                                         </span>
-                                        <!-- <div class="left-line"></div>
-                                        <div class="top-line"></div>
-                                        <div class="right-line"></div>
-                                        <div class="bottom-line"></div> -->
                                     </div>
                                 </div>
                                 <div class="ring-size-country-change">
@@ -2200,8 +2026,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="actions-wrapper"><a href="#" class="btn-recalibrate">Recalibrate</a> | <a href="#"
-                                class="btn-change-country">Change Country</a></div> -->
                         </div>
                     </div>
                 </div>
@@ -2215,9 +2039,9 @@
         <div id="6D9C5E62-B31F-304C-976E-71950C1B8E62"></div>
         <style>
             @media only screen and (max-width: 1000px) {
-                #init_calibration_page .container{
-                    background:url('mbl-ring-img.png') no-repeat center center/cover !important;
-                    height: 400px !important;
+                #init_calibration_page{
+                    background:url('mbl-ring-img.png') no-repeat center center/cover;
+                    height: 400px;
                 }
                 body{
                     padding:0px !important;
@@ -2226,15 +2050,12 @@
                     width: auto;
 
                 }
-                .first-one .main-wrapper{
-                    align-items: center;
-                }
-                /* #init_calibration_page .container {
+                #init_calibration_page .container {
                     height: 868px;
-                 display: flex;
-                justify-content: center;
-                flex-direction: column;
-                } */
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                }
                 #init_calibration_page  .row-col{
                     position: absolute;
                     bottom: 0%;
@@ -2249,7 +2070,7 @@
                 }
                 #init_calibration_page  .row-col-first {
                   width: auto;
-                text-align: center;
+                    text-align: center;
                 }
                 #init_calibration_page .main-wrapper{
                     max-width: 310px;
@@ -2257,8 +2078,8 @@
                     gap: 0px;
                 }
                 #init_calibration_page .row-col-second {
-                width: 200px;
-                text-align: center;
+                    width: 200px;
+                    text-align: center;
                 }
                 #init_calibration_page  .main-wrapper p:first-of-type{
                     font-size: 14px;
@@ -2277,29 +2098,28 @@
                     margin-bottom: 13px;
                 }
                 #init_calibration_page  .theme-btn.start-calibration {
-                width: 144px;
-                display: flex;
-        justify-content: center;
-        align-items: center;
+                    width: 144px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
                 #init_calibration_page .theme-btn {
-               padding: 10px 20px;
-               margin: 30px 0 35px 0;
-   
-             }
-             .page-header{
-                padding:0px;
-                background: #FBF8F4;
-                position: relative;
-             }
+                    padding: 10px 20px;
+                    margin: 30px 0 35px 0;
+                }
+                .page-header{
+                    padding:20px;
+                    background: #FBF8F4;
+                    position: relative;
+                }
    
              #card_calibration_page .main-wrapper img, #ring_size_calculator_page img{
                 display: none;
              }
              #card_calibration_page .main-wrapper-text-wrapper, #ring_size_calculator_page .main-wrapper-text-wrapper{
                 position: initial;
-                    transform: none;
-                    align-items: center;
+                transform: none;
+                align-items: center;
              }
              #card_calibration_page .text-wrapper-heading,#ring_size_calculator_page .text-wrapper-heading{
                 text-align: center;
@@ -2313,14 +2133,14 @@
                 padding-left: 0;
              }
              #card_calibration_page .text-wrapper-description, #ring_size_calculator_page .text-wrapper-description {
-            text-align: center;
+                text-align: center;
             }
             #card_calibration_page  .main-wrapper .row.px-5, #ring_size_calculator_page .main-wrapper .row.px-5{
                 padding-left: 0px !important;
                 padding-right: 0px !important;
             }
             #card_calibration_page .btn-save-calibration{
-                    width: auto !important;
+                width: auto !important;
             }
              .mobile-close-icon{
                 display: block !important;
@@ -2367,14 +2187,14 @@
                 max-width: 144px;
             }
             #ring_size_calculator_page .text-wrapper-description {
-        margin-bottom: 20px !important;
-        font-size: 12px !important;
-        }
-        #last_calibration_page, #share_calibration_page {
-     padding-top: 0px !important;
-        }
+                margin-bottom: 20px !important;
+                font-size: 12px !important;
+            }
+            #last_calibration_page, #share_calibration_page {
+                padding: 0px !important;
+            }
         #last_calibration_page .main-wrapper-text-wrapper{
-            margin-top: 70px;
+            /* margin-top: 70px; */
             align-items: center;
         }
         #last_calibration_page .text-wrapper-subheading{
@@ -2388,7 +2208,6 @@
     margin-bottom: 44px;
         }
        #share_calibration_page .main-wrapper{
-      margin-top: 94px;
       display: flex;
         flex-direction: column;
         align-items: center;
@@ -2422,6 +2241,8 @@
             padding: 9px !important;
                 }
               .theme-btn.black-btn{
+                    max-width: 144px;
+                    min-width: 144px;
                     height: 43px !important;
                     display: flex;
         justify-content: center;
@@ -2441,16 +2262,13 @@
                     flex-direction: column;
     align-items: center;
                 }
-
-                #card_calibration_page .text-wrapper-description,
-            #ring_size_calculator_page .text-wrapper-description {
-                max-width: 380px;
-            }
             #ring_size_calculator_page .ring-size-wrapper{
                 padding: 0px 10px !important;
             }
 
             }
+
+
         </style>
     </body>
 </html>
