@@ -56,11 +56,11 @@
             background: #f9f9f9;
         }
 
-        .btn-close img {
-            width: 20px;
-            display: inline-block;
-            vertical-align: middle;
-            margin-bottom: 2px;
+        .btn-close {
+            position: absolute;
+            z-index: 1;
+            right: 20px;
+            top: 20px;
         }
 
         /* End Common CSS  */
@@ -1911,15 +1911,12 @@
 </head>
 
 <body __processed_a542ac49-a136-41a5-ac10-af0bb84f8095__="true" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQiLCJMSU5LRURJTiI6ImRpc2FibGVkIiwiQ09ORklHIjoiZGlzYWJsZWQifSwidmVyc2lvbiI6IjIuMC4xNiIsInNjb3JlIjoyMDAxNn1d" cz-shortcut-listen="true">
-    <div id="ring-sizer" data-store_code="haute-carat" data-domain="ringsizer.hautecarat.com" class="variant-custome-display" bis_skin_checked="1">
-        <label class="product-option-item sf-po__option-button border border-color-border flex items-center justify-center mr-2 mb-2 cursor-pointer variant-picker__option-button">
-            <button class="inline-flex items-center">
-                <svg class="w-[24px] h-[24px]" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M608 128H32c-17.67 0-32 14.33-32 32v192c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V160c0-17.67-14.33-32-32-32zm0 224H32V160h80v56c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-56h64v56c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-56h64v56c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-56h64v56c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-56h64v56c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-56h80v192z"></path></svg>
-                <span class="ml-2 ">Check Your Ring Size</span>
-            </button>
-        </label>
+    <div class="btn-close" onclick="close_iframe();">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M1.875 2L14.4 14.525" stroke="black" stroke-width="2.25" stroke-linecap="round"/>
+            <path d="M14.4 2L1.875 14.525" stroke="black" stroke-width="2.25" stroke-linecap="round"/>
+        </svg>
     </div>
-
     <!-- Start Init Calibration Page -->
     <section id="init_calibration_page" class="page" style="display: none;">
         <div class="container">
@@ -1949,7 +1946,7 @@
     <!-- End Init Calibration Page  -->
     <!-- Start Card Calibration Page -->
     <section id="card_calibration_page" class="page" style="display: none;">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-6 col-sm-9 col-xs-12 col-12 main-wrapper-column p-0">
                     <div class="main-wrapper">
@@ -2087,7 +2084,7 @@
     <!-- End Last Calibration Page  -->
     <!-- Start Ring Size Calculator Page -->
     <section id="ring_size_calculator_page" class="page" style="display: none;">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-6 col-sm-8 col-xs-12 col-12 p-0">
                     <div class="main-wrapper">
