@@ -684,10 +684,17 @@
         #card_calibration_page .row.justify-content-center {
             height: 100% !important;
         }
-        #card_calibration_page .main-wrapper:first-child{
+        #card_calibration_page .first-col-wrapper .main-wrapper{
             display: block;
             width: 100%;
             background: url(column-image-1.png) no-repeat center center / cover;
+            position: relative;
+            height: 100%;
+        }
+        #ring_size_calculator_page .first-col-wrapper .main-wrapper{
+            display: block;
+            width: 100%;
+            background: url(column-image-2.png) no-repeat center center / cover;
             position: relative;
             height: 100%;
         }
@@ -1967,7 +1974,7 @@
     <section id="card_calibration_page" class="page" style="display: none;">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-6 col-sm-9 col-xs-12 col-12 main-wrapper-column p-0">
+                <div class="col-md-6 col-lg-6 col-sm-9 col-xs-12 col-12 main-wrapper-column p-0 first-col-wrapper">
                     <div class="main-wrapper">
                         <div class="main-wrapper-text-wrapper">
                             <h5 class="text-wrapper-subheading">STEP 1</h5>
@@ -2102,7 +2109,7 @@
     <section id="ring_size_calculator_page" class="page" style="display: none;">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-6 col-sm-8 col-xs-12 col-12 p-0">
+                <div class="col-md-6 col-lg-6 col-sm-8 col-xs-12 col-12 p-0 first-col-wrapper">
                     <div class="main-wrapper">
                         <img src="column-image-2.png" class="ring-image" alt="Ring">
                         <div class="main-wrapper-text-wrapper">
