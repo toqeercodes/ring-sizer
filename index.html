@@ -62,8 +62,8 @@
         .btn-close {
             position: absolute;
             z-index: 1;
-            right: 20px;
-            top: 20px;
+            right: 30px;
+            top: 30px;
         }
 
         /* End Common CSS  */
@@ -1974,7 +1974,7 @@
     <section id="card_calibration_page" class="page" style="display: none;">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-6 col-sm-9 col-xs-12 col-12 main-wrapper-column p-0 first-col-wrapper">
+                <div class="col-md-6 col-lg-6 col-sm-9 col-xs-12 col-12 main-wrapper-column pl-0 first-col-wrapper">
                     <div class="main-wrapper">
                         <div class="main-wrapper-text-wrapper">
                             <h5 class="text-wrapper-subheading">STEP 1</h5>
@@ -1985,7 +1985,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 col-sm-9 col-xs-12 col-12 main-wrapper-column p-0">
+                <div class="col-md-6 col-lg-6 col-sm-9 col-xs-12 col-12 main-wrapper-column pl-4">
                     <div class="main-wrapper">
                         <p class="sub-heading"
                             style="box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px; padding-top:20px; padding-bottom:20px;">
@@ -2109,7 +2109,7 @@
     <section id="ring_size_calculator_page" class="page" style="display: none;">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-6 col-sm-8 col-xs-12 col-12 p-0 first-col-wrapper">
+                <div class="col-md-6 col-lg-6 col-sm-8 col-xs-12 col-12 pl-0 first-col-wrapper">
                     <div class="main-wrapper">
                         <div class="main-wrapper-text-wrapper">
                             <h5 class="text-wrapper-subheading">STEP 2</h5>
@@ -2121,7 +2121,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 col-sm-8 col-xs-12 col-12 p-0">
+                <div class="col-md-6 col-lg-6 col-sm-8 col-xs-12 col-12 pl-4">
                     <div class="main-wrapper text-center">
                         <p class="sub-heading"
                             style="box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px; padding-top:20px; padding-bottom:20px;">
@@ -2511,7 +2511,7 @@
             wrapper.style.bottom = "0%";
             //wrapper.style.height = "720px";
             wrapper.style.maxWidth = "1100px";
-            wrapper.style.maxHeight = "560px";
+            wrapper.style.setProperty("max-height", "560px", "important");
             wrapper.style.margin = "auto";
             wrapper.style.borderRadius = "5px"
             wrapper.style.backgroundColor = "#ffffff";
