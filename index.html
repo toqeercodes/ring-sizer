@@ -1931,6 +1931,7 @@
                     element.classList.remove('active');
                 });
                 var active_classes = event.target.classList.value;
+                console.log("active_classes: ", active_classes);
                 var elements = document.querySelectorAll('.' + active_classes.split(' ').join('.'));
                 elements.forEach(function (element) {
                     element.classList.add('active');
@@ -2086,8 +2087,8 @@
                         </div>
                         <div class="ring-size-country-change">
                             <div class="ring-size-country-text ring-size-country-eur" country="GB">EUR</div>
-                            <div class="ring-size-country-text ring-size-country-usa" country="US">USA</div>
-                            <div class="ring-size-country-text ring-size-country-mm active" country="mm">mm</div>
+                            <div class="ring-size-country-text ring-size-country-usa active" country="US">USA</div>
+                            <div class="ring-size-country-text ring-size-country-mm" country="mm">mm</div>
                         </div>
                         <p class="italic">Explore Hautecarat's Stunning Ring Collections</p>
                         <div class="social-buttons">
