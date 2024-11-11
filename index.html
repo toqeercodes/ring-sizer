@@ -64,6 +64,26 @@
             background: #f9f9f9;
         }
 
+        @media (min-width: 1000px){
+            #card_calibration_page .first-col-wrapper .main-wrapper{
+                display: block;
+                width: 100%;
+                background: url(column-image-1.png) no-repeat center center / cover;
+                position: relative;
+                height: 100%;
+            }
+            #card_calibration_page .row.justify-content-center, #ring_size_calculator_page .row.justify-content-center {
+                height: 100% !important;
+            }
+            #ring_size_calculator_page .first-col-wrapper .main-wrapper{
+                display: block;
+                width: 100%;
+                background: url(column-image-2.png) no-repeat center center / cover;
+                position: relative;
+                height: 100%;
+            }
+        }
+
         .btn-close {
             position: absolute;
             z-index: 1;
@@ -686,23 +706,6 @@
             outline: none;
         }
 
-        #card_calibration_page .row.justify-content-center, #ring_size_calculator_page .row.justify-content-center {
-            height: 100% !important;
-        }
-        #card_calibration_page .first-col-wrapper .main-wrapper{
-            display: block;
-            width: 100%;
-            background: url(column-image-1.png) no-repeat center center / cover;
-            position: relative;
-            height: 100%;
-        }
-        #ring_size_calculator_page .first-col-wrapper .main-wrapper{
-            display: block;
-            width: 100%;
-            background: url(column-image-2.png) no-repeat center center / cover;
-            position: relative;
-            height: 100%;
-        }
 
         @keyframes slidein {
             from {
@@ -1837,6 +1840,10 @@
             .last-done-btn {
                 padding: 12px 10px !important;
             }
+            #card_calibration_page .text-wrapper-description,
+            #ring_size_calculator_page .text-wrapper-description {
+                max-width: 375px;
+            }
         }
 
         .last-done-btn {
@@ -2193,10 +2200,10 @@
     <script src="https://ringsizer.hautecarat.com/js/pages/calculator/main.js?v=1.0"></script>
     <div id="6D9C5E62-B31F-304C-976E-71950C1B8E62"></div>
     <style>
-        @media only screen and (max-width: 1000px) {
+        @media (max-width: 1000px) {
             #init_calibration_page {
                 background: url('mbl-ring-img.png') no-repeat center center/cover;
-                height: 400px;
+                height: 50%;
             }
 
             body {
@@ -2237,6 +2244,8 @@
                 max-width: 310px;
                 align-items: center;
                 gap: 0px;
+                display: flex;
+                flex-direction: column;
             }
 
             #init_calibration_page .row-col-second {
@@ -2305,10 +2314,10 @@
                 margin: 0px;
             }
 
-            #card_calibration_page .main-wrapper-column,
-            #ring_size_calculator_page .main-wrapper-column {
+            body #card_calibration_page .main-wrapper-column,
+            body #ring_size_calculator_page .main-wrapper-column {
                 padding-right: 0;
-                padding-left: 0;
+                padding-left: 0 !important;
             }
 
             #card_calibration_page .text-wrapper-description,
@@ -2363,15 +2372,12 @@
             }
 
             .btn-close {
-                position: absolute;
                 right: 12px;
-                bottom: -46px;
-                z-index: 10;
             }
 
-            #ring_size_calculator_page .col-md-6.col-lg-6.col-sm-8.col-xs-12.col-12 {
+            body #ring_size_calculator_page .col-md-6.col-lg-6.col-sm-8.col-xs-12.col-12 {
                 padding-right: 0px;
-                padding-left: 0px;
+                padding-left: 0px !important;
             }
 
             #ring_size_calculator_page .ring-sizer-buttons-main {
@@ -2480,6 +2486,18 @@
             #ring_size_calculator_page .ring-size-wrapper {
                 padding: 0px 10px !important;
             }
+            #ring_size_calculator_page .ring-sizer-wrapper {
+                height: 250px;
+            }
+            #last_calibration_page .main-wrapper, #share_calibration_page .main-wrapper{
+                padding-top: 100px !important;
+            }
+            #last_calibration_page .main-wrapper-text-wrapper{
+                margin-bottom: 20px;
+            }
+            #last_calibration_page .ring-size-country-change{
+                margin-bottom: 50px;
+            }
         }
     </style>
     <script>
@@ -2519,9 +2537,12 @@
             wrapper.style.top = "0%";
             wrapper.style.right = "0%";
             wrapper.style.bottom = "0%";
-            //wrapper.style.height = "720px";
+            if (window.innerWidth <= 768) {
+                wrapper.style.height = "100%";
+            } else {
+                wrapper.style.height = "560px";
+            }
             wrapper.style.maxWidth = "1100px";
-            wrapper.style.setProperty("max-height", "560px", "important");
             wrapper.style.margin = "auto";
             wrapper.style.borderRadius = "5px"
             wrapper.style.backgroundColor = "#ffffff";
