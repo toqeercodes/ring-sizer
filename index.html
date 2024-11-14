@@ -1995,7 +1995,7 @@
     <section id="card_calibration_page" class="page" style="display: none;">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-6 col-sm-9 col-xs-12 col-12 main-wrapper-column pl-0 first-col-wrapper">
+                <div class="col-md-6 col-lg-6 col-sm-9 col-xs-12 col-12 main-wrapper-column pl-0 first-col-wrapper pr-0">
                     <div class="main-wrapper">
                         <div class="main-wrapper-text-wrapper">
                             <h5 class="text-wrapper-subheading">STEP 1</h5>
@@ -2006,23 +2006,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 col-sm-9 col-xs-12 col-12 main-wrapper-column pl-4">
+                <div class="col-md-6 col-lg-6 col-sm-9 col-xs-12 col-12 main-wrapper-column pl-0 pr-0 ">
                     <div class="main-wrapper">
                         <p class="sub-heading" style="box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px; padding-top:20px; padding-bottom:20px;">
                             PLACE YOUR CARD HERE
                         </p>
-                        <div class="card-image-wrapper" style="background-size: auto 271.5px;">
-                            <div class="lines" style="height: 275.5px;"></div>
-                        </div>
-                        <div class="main-range-section range-progress-bar">
-                            <div class="step-button" id="card_resize_decrease">-</div>
-                            <div class="line range-wrapper">
-                                <input type="range" name="qty" step="0.5" min="100" max="400" value="220" class="progress qty" id="card_resize_range">
+                        <div class="card-image-main px-5">
+                            <div class="card-image-wrapper" style="background-size: auto 271.5px;">
+                                <div class="lines" style="height: 275.5px;"></div>
                             </div>
-                            <div class="step-button" id="card_resize_increase">+</div>
-                        </div>
-                        <div class="button-wrapper">
-                            <button class="theme-btn black-btn full-width-btn btn-save-calibration w-100">CONTINUE</button>
+                            <div class="main-range-section range-progress-bar">
+                                <div class="step-button" id="card_resize_decrease">-</div>
+                                <div class="line range-wrapper">
+                                    <input type="range" name="qty" step="0.5" min="100" max="400" value="220" class="progress qty" id="card_resize_range">
+                                </div>
+                                <div class="step-button" id="card_resize_increase">+</div>
+                            </div>
+                            <div class="button-wrapper">
+                                <button class="theme-btn black-btn full-width-btn btn-save-calibration w-100">CONTINUE</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -2121,7 +2123,7 @@
     <section id="ring_size_calculator_page" class="page" style="display: none;">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-6 col-sm-8 col-xs-12 col-12 pl-0 first-col-wrapper">
+                <div class="col-md-6 col-lg-6 col-sm-8 col-xs-12 col-12 pl-0 pr-0 first-col-wrapper">
                     <div class="main-wrapper">
                         <div class="main-wrapper-text-wrapper">
                             <h5 class="text-wrapper-subheading">STEP 2</h5>
@@ -2133,12 +2135,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 col-sm-8 col-xs-12 col-12 pl-4">
+                <div class="col-md-6 col-lg-6 col-sm-8 col-xs-12 col-12 pl-0 pr-0">
                     <div class="main-wrapper text-center">
                         <p class="sub-heading"
                             style="box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px; padding-top:20px; padding-bottom:20px;">
-                            PLACE YOUR RING ON THE CIRCLE </p>
-                        <div class="ring-size-wrapper">
+                            PLACE YOUR RING ON THE CIRCLE 
+                        </p>
+                        <div class="ring-size-wrapper px-5">
                             <div class="ring-sizer-wrapper">
                                 <div class="ring-sizer">
                                     <span class="ring-sizer-counter">
@@ -2673,6 +2676,10 @@
             }
             #last_calibration_page .ring-size-country-change{
                 margin-bottom: 50px;
+            }
+            .card-image-main.px-5{
+                padding-left: 0 !important;
+                padding-right: 0 !important;
             }
         }
     </style>
